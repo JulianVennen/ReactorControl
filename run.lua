@@ -7,19 +7,19 @@ function round(number)
     return math.floor(number + 0.5)
 end
 
+function drawValue(name, value, color, offset)
+    cobalt.graphics.setColor("white")
+    cobalt.graphics.print(name, 2 + offset, 16)
+    cobalt.graphics.rect("line", 1 + offset, 1, 5, 13)
+    cobalt.graphics.setColor(color)
+    cobalt.graphics.rect("fill", 2 + offset, 2, 2, round(value * 10))
+end
+
 function cobalt.draw()
-
-    cobalt.graphics.print("Fuel", 2, 16)
-    cobalt.graphics.rect("line", 1, 1, 5, 13)
-    cobalt.graphics.setColor("green")
-    cobalt.graphics.rect("fill", 2, 2, 2, round(reactor.getFuelFilledPercentage() * 10))
-
-
-    cobalt.graphics.print("Waste", 7, 16)
-    cobalt.graphics.rect("line", 6, 1, 5, 13)
-    cobalt.graphics.setColor("orange")
-    cobalt.graphics.rect("fill", 7, 2, 2, round(reactor.getWasteFilledPercentage() * 10))
-
+    drawValue("Fuel", reactor.getFuelFilledPercentage(), "green", 0)
+    drawValue("Waste", reactor.getWasteFilledPercentage(), "orange", 7)
+    drawValue("Water", reactor.getCoolantFilledPercentage(), "blue", 14)
+    drawValue("Steam", reactor.getHeatedCoolantFilledPercentage(), "gray", 21)
 end
 
 cobalt.init()
