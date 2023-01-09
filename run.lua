@@ -12,7 +12,9 @@ function drawValue(name, value, color, offset)
     cobalt.graphics.print(name, 2 + offset, 16)
     cobalt.graphics.rect("line", 1 + offset, 1, 5, 13)
     cobalt.graphics.setColor(color)
-    cobalt.graphics.rect("fill", 2 + offset, 2, 2, round(value * 10))
+
+    local length = round(value * 10);
+    cobalt.graphics.rect("fill", 2 + offset, 13 - length, 2, length)
 end
 
 function cobalt.draw()
