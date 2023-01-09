@@ -6,8 +6,8 @@ function clone (url, dir)
     shell.run("wget", "run", gitget, url, dir)
 end
 
-clone("https://github.com/ebernerd/cobalt-2", "cobalt")
 clone("https://github.com/JulianVennen/ReactorControl", "rc")
+clone("https://github.com/ebernerd/cobalt-2", "cobalt")
 
 shell.run("clear")
 textutils.slowPrint("Donwloaded. Use rc/run.lua to execute it.")
