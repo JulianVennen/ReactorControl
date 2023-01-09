@@ -3,11 +3,7 @@ ComputerCraft script to manage a Mekanism Fission Reactor.
 
 ### Download
 ```shell
-pastebin run wPtGKMam ebernerd cobalt-2 /
-mv cobalt-2 cobalt
-pastebin run wPtGKMam JulianVennen ReactorControl /
-mv ReactorControl/* .
-rm ReactorControl
+pastebin run w7dUVJYa
 ```
 
 
