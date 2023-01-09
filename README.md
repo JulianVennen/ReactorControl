@@ -3,7 +3,7 @@ ComputerCraft script to manage a Mekanism Fission Reactor.
 
 ### Download
 ```shell
-wget run https://github.com/JulianVennen/ReactorControl/blob/master/install.lua
+wget run https://raw.githubusercontent.com/JulianVennen/ReactorControl/master/install.lua
 ```
 
 
