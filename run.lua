@@ -1,5 +1,5 @@
 ----               Main Loop               ----
-local rules = dofile("./rules.lua")
+local rules = dofile("/rc/rules.lua")
 local cobalt = dofile("/cobalt/init.lua")
 local reactor = peripheral.wrap("BACK")
 
